@@ -40,7 +40,7 @@
 
 ### 📥 Clone the Repository
 
-- git clone https://github.com/v/brandcurb.git
+- git clone https://github.com/MalickMuzamil/brandcurb.git
 
 - cd brandcurb
 
