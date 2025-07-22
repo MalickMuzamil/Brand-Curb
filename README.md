@@ -40,9 +40,11 @@
 
 ### 📥 Clone the Repository
 
-- git clone https://github.com/your-username/brandcurb.git
+- git clone https://github.com/v/brandcurb.git
 
 - cd brandcurb
+
+---
 
 ## 🌐 Run Locally
 Simply open index.html in your browser:
@@ -50,17 +52,25 @@ Simply open index.html in your browser:
 start index.html
 Or double-click on the file.
 
+---
+
 ## 📁 Folder Structure
-swift
-Copy
-Edit
+
 brandcurb/
+
 ├── index.html
+
 ├── /assets/
+
 │   ├── css/
+
 │   ├── images/
+
 │   └── js/ (if any)
+
 └── README.md
+
+---
 
 ## 📚 Learnings & Goals
 ✅ Practiced clean and modern UI design principles
@@ -70,6 +80,8 @@ brandcurb/
 ✅ Strengthened structure with semantic HTML elements
 
 ✅ Built a client-ready landing page without JavaScript
+
+---
 
 🧑‍💻 Author
 Made with 💙 by MalickMuzamil
