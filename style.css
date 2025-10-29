@@ -1,37 +1,333 @@
+/* ==============================
+   GENERAL STYLING
+============================== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+p {
+  color: #555;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+.navbar {
+  padding: 0.8rem 1.2rem;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #222 !important;
+  transition: all 0.3s ease;
+}
+
+/* Desktop navbar spacing */
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 1.5rem !important;
-    padding-left: 1.5rem !important;
+    padding: 0 1.2rem !important;
+  }
+
+  .navbar-brand {
+    margin-right: 2rem;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #dc3545 !important;
+    transform: translateY(-2px);
   }
 }
 
-.marquee-wrapper {
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    height: 45px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.6rem;
+  }
+}
+
+.nav-link.active {
+  color: #dc3545 !important;
+  font-weight: 600;
+}
+
+.sticky-top {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background: #fff;
+  z-index: 999;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(to right, #ffffff, #f8f9fa);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.hero-section h1 {
+  color: #1a1a1a;
+}
+
+.hero-section p {
+  color: #555;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+   SERVICES
+============================== */
+/* ==============================
+   SERVICE CARD FIX (Equal Height + Clean Hover)
+============================== */
+
+.service-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  background: #fff;
+  overflow: hidden; /* important to stop image overflow */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card img {
   width: 100%;
-  overflow: hidden;
-  padding: 20px 0;
-  position: relative;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.4s ease;
 }
 
-.marquee-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scrollMarquee 20s linear infinite;
+.service-card:hover img {
+  transform: scale(1.05);
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
+.service-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+#services .card {
+  min-height: 100%;
+}
+
+
+/* ==============================
+   ABOUT SECTION
+============================== */
+#about {
+  padding: 80px 0;
+}
+
+#about h2 span {
+  color: #dc3545;
+}
+
+#about ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ==============================
+   TESTIMONIALS
+============================== */
+#testimonials {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+
+#testimonials .card {
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+#testimonials .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+#testimonials img {
+  border: 3px solid #dc3545;
+}
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+.contact-section {
+  background: linear-gradient(135deg, #dc3545, #ff9800);
+  color: #fff;
+  padding: 80px 0;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+}
+
+.contact-section p {
+  color: #f9f9f9;
+}
+
+.contact-section .btn {
+  background: #fff;
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.contact-section .btn:hover {
+  background: #ffca2c;
+  color: #000;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background: #212121;
+  color: #ccc;
+  padding: 2rem 0;
+}
+
+footer p {
+  margin: 0;
+  color: #aaa;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc107;
+}
+
+footer i {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+footer i:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   ANIMATIONS
+============================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s 0.4s forwards;
+}
+
+.fade-in-delay-2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes scrollMarquee {
-  0% {
-    transform: translateX(0%);
+/* ==============================
+   RESPONSIVENESS FIXES
+============================== */
+@media (max-width: 992px) {
+  .hero-section {
+    text-align: center;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .hero-section .col-md-6 {
+    margin-bottom: 2rem;
+  }
+
+  #about .row {
+    text-align: center;
+  }
+
+  #about img {
+    margin-bottom: 2rem;
+  }
+
+  #testimonials .card {
+    margin-bottom: 1rem;
   }
 }
